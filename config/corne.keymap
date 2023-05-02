@@ -5,230 +5,85 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/led/led.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
 
-//#include <dt-bindings/zmk/mouse.h> /* to be able to use keyboard mouse */
-/*
- * Temporarily here because nice nano v2 spi is not defined on ZMk Yet
- * Source: https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/reviung41/boards/nice_nano.overlay
- * GitHub Issue: https://github.com/zmkfirmware/zmk/issues/885
- */
-
-&spi1 {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
-    mosi-pin = <6>;
-
-    // Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
-
-    sck-pin = <5>;
-    miso-pin = <7>;
-
-    led_strip: ws2812@0 {
-        compatible = "worldsemi,ws2812-spi";
-        label = "WS2812";
-
-        /* SPI */
-
-        reg = <0>;/* ignored, but necessary for SPI bindings */
-        spi-max-frequency = <4000000>;
-
-        /* WS2812 */
-
-        chain-length = <27>;/* arbitrary; change at will */
-        spi-one-frame = <0x70>;
-        spi-zero-frame = <0x40>;
-        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-    };
-};
+// dt-formatter: indent = "  "
+// dt-formatter: reindentMultilineIntegerCells = "dedent"
 
 / {
-    chosen {
-        zmk,underglow = &led_strip;
+  behaviors {
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping-term-ms = <150>;
+      quick-tap-ms = <0>;
+      flavor = "tap-preferred";
+      bindings =
+        <&kp>,
+        <&kp>;
     };
-};
+  };
 
-/*
- * Above Temporarily here because nice nano v2 spi is not defined on ZMk Yet
- * Source: https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/reviung41/boards/nice_nano.overlay
- * GitHub Issue: https://github.com/zmkfirmware/zmk/issues/885
- */
+  combos {
+    compatible = "zmk,combos";
 
-/ {
-    /*
- * tap dance test
- */
-
-    behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_0";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings =
-                <&mo 1>,
-                <&mo 3>;
-        };
-        td1: tap_dance_1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_1";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings =
-                <&kp LSHFT>,
-                <&kp CAPS>;
-        };
+    tab {
+      bindings = <&trans>;
+      key-positions = <2 3>;
     };
 
-    /*
- * mouse conf
- */
-    //&mmv {    
-    //        time-to-max-speed-ms = <500>;
-    //        acceleration-exponent=<1>;
-    //};
-    //&mwh {    
-    //        time-to-max-speed-ms = <2000>;
-    //        acceleration-exponent=<0>;
-    //};
-    /*
- * 
- * to do : template
- *
- */
-    /*
- * to do : alias layer 
- */
-
-    #define BASE 0   
-#define LOWER 1
-#define RAISE 2
-#define FUN 3
-#define NAV 4
-#define ADJUST 5
-
-    /*to do : conditionnal layer
- * 
- *     conditional_layers {
- *         compatible = "zmk,conditional-layers";
- * 
- *         tri_layer {
- *             if-layers = <LOWER RAISE>;
- *             then-layer = <OPTION>;
- *         };
- *     };
- * 
- */
-    /*
- * 
- * to do : macros
- *
- * macros {
- *         macro1: macro1 {
- *             compatible = "zmk,behavior-macro";
- *             label = "new_macro";
- *             #binding-cells = <0>;
- *             bindings = <&kp P &kp DOT &kp T &kp KP_MULTIPLY &kp NUMBER_0 &kp NUMBER_9 &kp NUMBER_8 &kp NUMBER_1 &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_9 &kp NUMBER_9 &kp NUMBER_0 &kp NUMBER_2 &kp PLUS &kp T &kp DOT &kp T &kp KP_MULTIPLY &kp PLUS &kp R &kp DOT &kp H>;
- *         };
- *     };
- *
- */
-    /*
- * keymap
- */
-
-    combos {
-        compatible = "zmk,combos";
-
-        Unlock {
-            bindings = <&to 0>;
-            key-positions = <11 23 35>;
-            timeout-ms = <50>;
-            layers = <0 4 5 1 2 6 7 3>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <0 1>;
-            timeout-ms = <50>;
-            layers = <0 1 2 3 7 5 4>;
-        };
-
-        up {
-            bindings = <&kp UP>;
-            key-positions = <8 20>;
-            timeout-ms = <50>;
-            layers = <0 1 2 3 4 5 7 6>;
-            slow-release;
-        };
-
-        down {
-            bindings = <&kp DOWN>;
-            key-positions = <20 32>;
-            timeout-ms = <50>;
-            layers = <0 1 2 3 7 5 4>;
-        };
-
-        left {
-            bindings = <&kp LEFT>;
-            key-positions = <19 20>;
-            timeout-ms = <50>;
-            layers = <0 1 2 3 7 5 4>;
-        };
-
-        right {
-            bindings = <&kp RIGHT>;
-            key-positions = <20 21>;
-            timeout-ms = <50>;
-            layers = <0 1 2 3 7 5 4>;
-        };
+    ctrl {
+      bindings = <&kp LCTRL>;
+      key-positions = <26 27>;
     };
 
-    macros {
-        key: key {
-            compatible = "zmk,behavior-macro";
-            label = "key";
-            #binding-cells = <0>;
-            bindings = <&kp W &kp O &kp A &kp I &kp N &kp I &kp N1 &kp N9 &kp N9 &kp N5>;
-        };
-        mail: mail {
-            compatible = "zmk,behavior-macro";
-            label = "mail";
-            #binding-cells = <0>;
-            bindings = <&kp AT &kp M &kp O &kp Z &kp I &kp X &kp U &kp N &kp DOT &kp C &kp O &kp M>;
-        };
-        phone1: phone1 {
-            compatible = "zmk,behavior-macro";
-            label = "phone1";
-            #binding-cells = <0>;
-            bindings = <&kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_1 &kp KP_NUMBER_6>;
-            tap-ms = <50>;
-            wait-ms = <50>;
-        };
-        b: b {
-            compatible = "zmk,behavior-macro";
-            label = "b";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RCTRL &kp RALT>,
-                <&macro_tap>,
-                <&kp A>,
-                <&macro_release>,
-                <&kp RCTRL &kp RALT>;
-
-            tap-ms = <50>;
-            wait-ms = <50>;
-        };
+    cmd {
+      bindings = <&kp LCMD>;
+      key-positions = <37 38>;
     };
 
-    keymap {
-        compatible = "zmk,keymap";
-        
+    alt {
+      bindings = <&kp LEFT_ALT>;
+      key-positions = <39 40>;
+    };
+
+    shift {
+      bindings = <&kp LSHIFT>;
+      key-positions = <8 9>;
+    };
+
+    caps_word {
+      bindings = <&caps_word>;
+      key-positions = <17 18>;
+    };
+
+    delete {
+      bindings = <&kp DEL>;
+      key-positions = <32 33>;
+    };
+  };
+
+  macros {
+    zed_em_kay: zed_em_kay {
+      compatible = "zmk,behavior-macro";
+      label = "ZM_zed_em_kay";
+      #binding-cells = <0>;
+      bindings =
+        <&macro_press>,
+        <&kp LSHFT>,
+        <&macro_tap>,
+        <&kp Z &kp M &kp K>,
+        <&macro_release>,
+        <&kp LSHFT>;
+    };
+  };
+
+  keymap {
+    compatible = "zmk,keymap";
+
     base {
       bindings = <
   &kp TAB       &kp Q       &kp W        &kp E         &kp R      &kp T     &kp Y         &kp U        &kp I       &kp O          &kp P  &kp BSLH
