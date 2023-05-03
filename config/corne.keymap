@@ -45,17 +45,29 @@
   };
 
   macros {
-    zed_em_kay: zed_em_kay {
+    phonecn: phonecn {
       compatible = "zmk,behavior-macro";
-      label = "ZM_zed_em_kay";
+      label = "PHONECN";
       #binding-cells = <0>;
-      bindings =
-        <&macro_press>,
-        <&kp LSHFT>,
-        <&macro_tap>,
-        <&kp Z &kp M &kp K>,
-        <&macro_release>,
-        <&kp LSHFT>;
+      bindings = <&kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_1 &kp KP_NUMBER_6>;
+    };
+    mailmzx: mailmzx {
+      compatible = "zmk,behavior-macro";
+      label = "MAILMZX";
+      #binding-cells = <0>;
+      bindings = <&kp AT_SIGN &kp M &kp O &kp Z &kp I &kp X &kp U &kp N &kp PERIOD &kp C &kp O &kp M>;
+    };
+    eamil: eamil {
+      compatible = "zmk,behavior-macro";
+      label = "EAMIL";
+      #binding-cells = <0>;
+      bindings = <&kp AT_SIGN &kp S &kp H &kp E &kp N &kp X &kp I &kp N &kp PERIOD &kp C &kp O &kp M>;
+    };
+    password: password {
+      compatible = "zmk,behavior-macro";
+      label = "PASSWORD";
+      #binding-cells = <0>;
+      bindings = <&kp W &kp O &kp A &kp I &kp N &kp I &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_9 &kp KP_NUMBER_5>;
     };
   };
 
@@ -86,10 +98,10 @@
 
     number {
       bindings = <
-&trans     &kp AT_SIGN  &kp KP_NUMBER_1   &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL       &kp F1   &kp F2   &kp F3   &kp F4   &kp F5  &trans
-&trans       &kp MINUS  &kp KP_NUMBER_4   &kp KP_NUMBER_5  &kp KP_NUMBER_6   &kp PLUS       &kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans
-&trans  &kp UNDERSCORE  &kp KP_NUMBER_7   &kp KP_NUMBER_8  &kp KP_NUMBER_9     &kp N0      &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
-                                         &kp LEFT_CONTROL            &mo 4    &kp RET    &kp SPACE    &to 0    &to 7
+&trans     &kp AT_SIGN  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL       &kp F1   &kp F2   &kp F3   &kp F4   &kp F5  &mailmzx
+&trans       &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6   &kp PLUS       &kp F6   &kp F7   &kp F8   &kp F9  &kp F10    &eamil
+&trans  &kp UNDERSCORE  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9     &kp N0      &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &phonecn
+                                               &password            &mo 4    &kp RET    &kp SPACE    &to 0    &to 7
       >;
 
       label = "NUMBER";
