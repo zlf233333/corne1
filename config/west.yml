@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: lttb
-      url-base: https://github.com/lttb
+    - name: mozixun-me
+      url-base: https://github.com/mozixun-me
   projects:
-    - name: zmk
-      remote: lttb
-      revision: experimental
+    - name: mozixun
+      remote: mozixun-me
+      revision: main
       import: app/west.yml
   self:
     path: config
