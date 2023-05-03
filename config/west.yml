@@ -2,12 +2,19 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: mozixun-me
-      url-base: https://github.com/mozixun-me
+    - name: ftc
+      url-base: https://github.com/ftc
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
-    - name: mozixun
-      remote: mozixun-me
+    - name: zmk
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
+#   - name: zmk
+#      remote: ftc
+#      revision: mouse-ftc
+#      import: app/west.ym
+
   self:
     path: config
