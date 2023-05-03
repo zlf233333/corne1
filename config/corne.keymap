@@ -108,10 +108,10 @@
 
     number {
       bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans     &kp AT_SIGN  &kp KP_NUMBER_1   &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL       &kp F1   &kp F2   &kp F3   &kp F4   &kp F5  &trans
+&trans       &kp MINUS  &kp KP_NUMBER_4   &kp KP_NUMBER_5  &kp KP_NUMBER_6   &kp PLUS       &kp F6   &kp F7   &kp F8   &kp F9  &kp F10  &trans
+&trans  &kp UNDERSCORE  &kp KP_NUMBER_7   &kp KP_NUMBER_8  &kp KP_NUMBER_9     &kp N0      &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans
+                                         &kp LEFT_CONTROL            &mo 4    &kp RET    &kp SPACE    &to 0    &to 7
       >;
 
       label = "NUMBER";
