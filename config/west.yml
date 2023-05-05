@@ -6,9 +6,11 @@ manifest:
       url-base: https://github.com/ftc
     - name: petejohanson
       url-base: https://github.com/petejohanson
+    - name: mozixun
+      url-base: https://github.com/mozixun  
   projects:
     - name: zmk
-      remote: zmkfirmware
+      remote: mozixun
       revision: main
       import: app/west.yml
 #   - name: zmk
