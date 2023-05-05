@@ -80,24 +80,32 @@
       label = "PHONECN";
       #binding-cells = <0>;
       bindings = <&kp KP_NUMBER_1 &kp KP_NUMBER_5 &kp KP_NUMBER_5 &kp KP_NUMBER_6 &kp KP_NUMBER_7 &kp KP_NUMBER_8 &kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_1 &kp KP_NUMBER_1 &kp KP_NUMBER_6>;
+      wait-ms = <50>;
+      tap-ms = <50>;
     };
     mailmzx: mailmzx {
       compatible = "zmk,behavior-macro";
       label = "MAILMZX";
       #binding-cells = <0>;
       bindings = <&kp AT_SIGN &kp M &kp O &kp Z &kp I &kp X &kp U &kp N &kp PERIOD &kp C &kp O &kp M>;
+      wait-ms = <50>;
+      tap-ms = <50>;
     };
     eamil: eamil {
       compatible = "zmk,behavior-macro";
       label = "EAMIL";
       #binding-cells = <0>;
       bindings = <&kp AT_SIGN &kp S &kp H &kp E &kp N &kp X &kp I &kp N &kp PERIOD &kp C &kp O &kp M>;
+      wait-ms = <50>;
+      tap-ms = <50>;
     };
     password: password {
       compatible = "zmk,behavior-macro";
       label = "PASSWORD";
       #binding-cells = <0>;
       bindings = <&kp W &kp O &kp A &kp I &kp N &kp I &kp KP_NUMBER_1 &kp KP_NUMBER_9 &kp KP_NUMBER_9 &kp KP_NUMBER_5>;
+      wait-ms = <50>;
+      tap-ms = <50>;
     };
   };
 
