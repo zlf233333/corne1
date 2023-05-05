@@ -41,6 +41,36 @@
     tab {
       bindings = <&kp TAB>;
       key-positions = <0 1>;
+      layers = <0>;
+      timeout-ms = <50>;
+    };
+
+    up {
+      bindings = <&kp UP>;
+      key-positions = <8 20>;
+      layers = <0 1 2>;
+      timeout-ms = <50>;
+    };
+
+    down {
+      bindings = <&kp DOWN>;
+      key-positions = <20 32>;
+      timeout-ms = <50>;
+      layers = <0 1 2>;
+    };
+
+    righe {
+      bindings = <&kp RIGHT_ARROW>;
+      key-positions = <20 21>;
+      timeout-ms = <50>;
+      layers = <0 1 2>;
+    };
+
+    left {
+      bindings = <&kp LEFT>;
+      key-positions = <19 20>;
+      layers = <0 1 2>;
+      timeout-ms = <50>;
     };
   };
 
