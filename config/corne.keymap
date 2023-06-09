@@ -150,7 +150,7 @@
     };
 
     blsh {
-      bindings = <&kp LS(BSLH)>;
+      bindings = <&kp LS(BACKSLASH)>;
       key-positions = <4 17>;
       layers = <0 1 2 3 4 6>;
       timeout-ms = <50>;
