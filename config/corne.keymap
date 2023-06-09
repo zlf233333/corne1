@@ -120,6 +120,27 @@
       layers = <0 1 2 3 4 6>;
       timeout-ms = <50>;
     };
+
+    pipe {
+      bindings = <&kp LS(PIPE)>;
+      key-positions = <5 6>;
+      timeout-ms = <50>;
+      layers = <0 1 2 3 4 6>;
+    };
+
+    minus {
+      bindings = <&kp MINUS>;
+      key-positions = <17 18>;
+      timeout-ms = <50>;
+      layers = <0 1 2 3 4 6>;
+    };
+
+    under {
+      bindings = <&kp LS(UNDERSCORE)>;
+      key-positions = <29 30>;
+      timeout-ms = <50>;
+      layers = <0 1 2 3 4 6>;
+    };
   };
 
   macros {
