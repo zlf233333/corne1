@@ -72,6 +72,14 @@
       layers = <0 1 2>;
       timeout-ms = <50>;
     };
+
+    jietu {
+      bindings = <&jietu>;
+      key-positions = <35 23>;
+      slow-release;
+      layers = <0 1 2 3 4 5 6>;
+      timeout-ms = <50>;
+    };
   };
 
   macros {
