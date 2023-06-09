@@ -141,6 +141,20 @@
       timeout-ms = <50>;
       layers = <0 1 2 3 4 6>;
     };
+
+    slash {
+      bindings = <&kp SLASH>;
+      key-positions = <18 7>;
+      layers = <0 1 2 3 4 6>;
+      timeout-ms = <50>;
+    };
+
+    blsh {
+      bindings = <&kp NON_US_BACKSLASH>;
+      key-positions = <4 17>;
+      layers = <0 1 2 3 4 6>;
+      timeout-ms = <50>;
+    };
   };
 
   macros {
