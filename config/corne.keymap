@@ -162,6 +162,20 @@
       timeout-ms = <50>;
       layers = <0 1 2 3 4 6>;
     };
+
+    plus {
+      bindings = <&kp PLUS>;
+      key-positions = <0 1>;
+      timeout-ms = <50>;
+      layers = <0 1 2 3 4 6>;
+    };
+
+    minus {
+      bindings = <&kp MINUS>;
+      key-positions = <12 13>;
+      timeout-ms = <50>;
+      layers = <0 1 2 3 4 6>;
+    };
   };
 
   macros {
