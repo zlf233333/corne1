@@ -38,13 +38,6 @@
       layers = <0 1 2 3 7 6 5 4>;
     };
 
-    tab {
-      bindings = <&kp TAB>;
-      key-positions = <0 1>;
-      layers = <0>;
-      timeout-ms = <50>;
-    };
-
     up {
       bindings = <&kp UP>;
       key-positions = <8 20>;
