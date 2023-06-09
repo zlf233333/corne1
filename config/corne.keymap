@@ -155,6 +155,20 @@
       layers = <0 1 2 3 4 6>;
       timeout-ms = <50>;
     };
+
+    lthan {
+      bindings = <&kp LS(LESS_THAN)>;
+      key-positions = <15 16 17>;
+      layers = <0 1 2 3 4 6>;
+      timeout-ms = <50>;
+    };
+
+    rlthan {
+      bindings = <&kp LS(GREATER_THAN)>;
+      key-positions = <18 19 20>;
+      timeout-ms = <50>;
+      layers = <0 1 2 3 4 6>;
+    };
   };
 
   macros {
