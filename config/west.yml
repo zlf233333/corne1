@@ -9,7 +9,7 @@ manifest:
     - name: mozixun
       url-base: https://github.com/mozixun  
   projects:
-    - name: zmk
+    - name: zmktest
       remote: mozixun
       revision: main
       import: app/west.yml
