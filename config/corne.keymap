@@ -262,10 +262,10 @@
 
     software {
       bindings = <
-&trans  &trans  &trans    &trans  &trans  &trans    &trans  &jietu  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp MB1  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans    &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &jietu  &trans  &trans  &trans  &trans
+&trans  &trans  &none   &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
       >;
 
       label = "SOFTWARE";
