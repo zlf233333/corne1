@@ -33,7 +33,7 @@
       key-positions = <39 38>;
       slow-release;
       timeout-ms = <50>;
-      layers = <0 1 2 3 7 6 5 4>;
+      layers = <0 1 2 3 5 4>;
     };
 
     up {
@@ -68,7 +68,7 @@
       bindings = <&jietu>;
       key-positions = <35 23>;
       slow-release;
-      layers = <0 1 2 3 4 5 6>;
+      layers = <0 1 2 3 4 5>;
       timeout-ms = <50>;
     };
 
@@ -76,27 +76,27 @@
       bindings = <&kp LEFT_BRACKET>;
       key-positions = <4 5>;
       timeout-ms = <50>;
-      layers = <0 1 2 4 6>;
+      layers = <0 1 2 4>;
     };
 
     rbracket {
       bindings = <&kp RIGHT_BRACKET>;
       key-positions = <6 7>;
-      layers = <0 1 2 3 4 6>;
+      layers = <0 1 2 3 4>;
       timeout-ms = <50>;
     };
 
     lbrace {
       bindings = <&kp LS(LEFT_BRACE)>;
       key-positions = <16 17>;
-      layers = <0 1 2 3 4 6>;
+      layers = <0 1 2 3 4>;
       timeout-ms = <50>;
     };
 
     rbrace {
       bindings = <&kp LS(RIGHT_BRACE)>;
       key-positions = <18 19>;
-      layers = <0 1 2 3 6 4>;
+      layers = <0 1 2 3 4>;
       timeout-ms = <50>;
     };
 
@@ -108,7 +108,7 @@
     rpra {
       bindings = <&kp LS(RIGHT_PARENTHESIS)>;
       key-positions = <30 31>;
-      layers = <0 1 2 3 4 6>;
+      layers = <0 1 2 3 4>;
       timeout-ms = <50>;
     };
 
@@ -116,41 +116,41 @@
       bindings = <&kp LS(PIPE)>;
       key-positions = <5 6>;
       timeout-ms = <50>;
-      layers = <0 1 2 3 4 6>;
+      layers = <0 1 2 3 4>;
     };
 
     minus {
       bindings = <&kp MINUS>;
       key-positions = <19 20 21>;
       timeout-ms = <50>;
-      layers = <0 1 2 3 4 6>;
+      layers = <0 1 2 3 4>;
     };
 
     under {
       bindings = <&kp LS(UNDERSCORE)>;
       key-positions = <14 15 16>;
       timeout-ms = <50>;
-      layers = <0 1 2 3 4 6>;
+      layers = <0 1 2 3 4>;
     };
 
     slash {
       bindings = <&kp SLASH>;
       key-positions = <18 7>;
-      layers = <0 1 2 3 4 6>;
+      layers = <0 1 2 3 4>;
       timeout-ms = <50>;
     };
 
     blsh {
       bindings = <&kp LS(BACKSLASH)>;
       key-positions = <4 17>;
-      layers = <0 1 2 3 4 6>;
+      layers = <0 1 2 3 4>;
       timeout-ms = <50>;
     };
 
     lthan {
       bindings = <&kp LS(LESS_THAN)>;
       key-positions = <15 16 17>;
-      layers = <0 1 2 3 4 6>;
+      layers = <0 1 2 3 4>;
       timeout-ms = <50>;
     };
 
@@ -158,7 +158,7 @@
       bindings = <&kp LS(GREATER_THAN)>;
       key-positions = <18 19 20>;
       timeout-ms = <50>;
-      layers = <0 1 2 3 4 6>;
+      layers = <0 1 2 3 4>;
     };
   };
 
@@ -184,7 +184,7 @@
       bindings = <
 &kp CAPS          &kp Q  &kp W  &kp E           &kp R      &kp T        &kp Y              &kp U        &kp I              &kp O       &kp P          &kp BACKSPACE
 &kp LEFT_CONTROL  &kp A  &kp S  &kp D           &kp F      &kp G        &kp H              &kp J        &kp K              &kp L       &kp SEMICOLON  &kp SQT
-&lt 4 TAB         &kp Z  &kp X  &kp C           &kp V      &kp B        &kp N              &kp M        &kp COMMA          &kp PERIOD  &kp SLASH      &kp LEFT_ALT
+&lt 3 TAB         &kp Z  &kp X  &kp C           &kp V      &kp B        &kp N              &kp M        &kp COMMA          &kp PERIOD  &kp SLASH      &kp LEFT_ALT
                                 &kp LEFT_SHIFT  &lt 1 ESC  &kp SPACE    &mt RSHIFT RETURN  &lt 2 SPACE  &kp RIGHT_COMMAND
       >;
 
@@ -196,7 +196,7 @@
 &kp GRAVE  &kp AT_SIGN     &kp AT_SIGN        &kp HASH   &kp DOLLAR      &kp PERCENT         &kp CARET         &kp AMPERSAND      &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
 &kp MINUS  &kp UNDERSCORE  &kp EQUAL          &kp PLUS   &kp LEFT_BRACE  &kp RIGHT_BRACE     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp UP_ARROW  &kp COMMA             &kp PERIOD             &kp LEFT_SHIFT
 &kp PIPE   &kp COLON       &kp DOUBLE_QUOTES  &kp QMARK  &kp LESS_THAN   &kp GREATER_THAN    &kp SQT           &kp LEFT           &kp DOWN      &kp RIGHT             &kp LEFT_ALT           &kp K_FIND
-                                              &to 7      &to 0           &kp RET             &kp SPACE         &mo 3              &to 4
+                                              &to 0      &to 0           &kp RET             &kp SPACE         &mo 3              &to 4
       >;
 
       label = "SYMBOLS";
@@ -207,7 +207,7 @@
 &trans  &kp AT_SIGN     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp EQUAL    &kp F1     &kp F2   &kp F3   &kp F4   &kp F5   &none
 &trans  &kp MINUS       &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS     &kp F6     &kp F7   &kp F8   &kp F9   &kp F10  &none
 &trans  &kp UNDERSCORE  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp N0       &kp F11    &kp F12  &kp F13  &kp F14  &kp F15  &none
-                                         &trans           &mo 4            &kp RET      &kp SPACE  &to 0    &to 7
+                                         &trans           &mo 4            &kp RET      &kp SPACE  &to 0    &to 0
       >;
 
       label = "NUMBER";
@@ -217,8 +217,8 @@
       bindings = <
 &rgb_ug RGB_TOG                  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
 &rgb_ug RGB_COLOR_HSB(299,0,99)  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR    &bt BT_CLR    &bt BT_NXT    &bt BT_PRV    &trans        &trans        &trans
-&to 1                            &to 2            &to 3            &to 4            &to 5            &to 6              &trans        &trans        &trans        &trans        &trans        &trans
-                                                                   &to 7            &trans           &to 0              &trans        &trans        &trans
+&to 1                            &to 2            &to 3            &to 4            &to 5            &to 0              &trans        &trans        &trans        &trans        &trans        &trans
+                                                                   &to 0            &trans           &to 0              &trans        &trans        &trans
       >;
 
       label = "SYSTEM";
@@ -244,28 +244,6 @@
       >;
 
       label = "GAME";
-    };
-
-    markdown {
-      bindings = <
-&trans  &none   &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-      >;
-
-      label = "MD";
-    };
-
-    locking {
-      bindings = <
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none  &none  &none    &none  &none  &none  &none  &none  &none
-                     &none  &none  &none    &none  &none  &none
-      >;
-
-      label = "LOCKING";
     };
   };
 };
