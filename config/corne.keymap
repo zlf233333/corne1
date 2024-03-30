@@ -29,7 +29,7 @@
     compatible = "zmk,combos";
 
     to0 {
-      bindings = <&to 0>;
+      bindings = <&to 5>;
       key-positions = <11 23 35>;
       slow-release;
       timeout-ms = <50>;
