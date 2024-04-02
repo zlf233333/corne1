@@ -184,7 +184,7 @@
       bindings = <
 &kp CAPS          &kp Q  &kp W  &kp E           &kp R      &kp T        &kp Y              &kp U        &kp I              &kp O       &kp P          &kp BACKSPACE
 &kp LEFT_CONTROL  &kp A  &kp S  &kp D           &kp F      &kp G        &kp H              &kp J        &kp K              &kp L       &kp SEMICOLON  &kp SQT
-&lt 3 TAB         &kp Z  &kp X  &kp C           &kp V      &kp B        &kp N              &kp M        &kp COMMA          &kp PERIOD  &kp SLASH      &kp RIGHT_ALT
+&lt 4 TAB         &kp Z  &kp X  &kp C           &kp V      &kp B        &kp N              &kp M        &kp COMMA          &kp PERIOD  &kp SLASH      &kp RIGHT_ALT
                                 &kp LEFT_SHIFT  &lt 1 ESC  &kp SPACE    &mt RSHIFT RETURN  &lt 2 SPACE  &kp RIGHT_COMMAND
       >;
 
