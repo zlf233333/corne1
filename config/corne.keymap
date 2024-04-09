@@ -237,9 +237,9 @@
 
     GAME {
       bindings = <
-&kp TAB   &kp Q  &kp W  &kp E      &kp R      &kp T        &kp Y    &kp U      &kp I   &kp O   &kp P   &kp N1
-&kp CAPS  &kp A  &kp S  &kp D      &kp F      &kp G        &kp H    &kp J      &kp K   &kp L   &kp N5  &kp N2
-&kp LALT  &kp Z  &kp X  &kp C      &kp V      &kp B        &kp N    &kp M      &trans  &trans  &kp N4  &kp N3
+&kp TAB   &kp Q  &kp W  &kp E      &kp R      &kp T        &kp Y    &kp U      &kp I          &kp O       &kp P   &kp N1
+&kp CAPS  &kp A  &kp S  &kp D      &kp F      &kp G        &kp H    &kp J      &kp K          &kp L       &kp N5  &kp N2
+&kp LALT  &kp Z  &kp X  &kp C      &kp V      &kp B        &kp N    &kp M      &kp BACKSPACE  &kp ESCAPE  &kp N4  &kp N3
                         &kp LCTRL  &kp LSHFT  &kp SPACE    &kp ESC  &kp GRAVE  &kp F1
       >;
     };
